@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TETANUS PREDICTION SYSTEM USING MACHINE LEARNING|RESULT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='login/images/icons/favicon.ico') }}"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/fonts/iconic/css/material-design-iconic-font.min.css') }}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/animate/animate.css') }}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/animsition/css/animsition.min.css') }}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/daterangepicker/daterangepicker.css') }}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/css/main.css') }}">
+<!--===============================================================================================-->
+
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 m-b-20"><br/><br/>
+                <form action="#" class="login100-form validate-form" method="post">
+                    <span class="login100-form-title p-b-6">
+                       TETANUS PREDICTION SYSTEM USING MACHINE LEARNING
+                    </span>
+                    <span class="login100-form-title p-b-28">
+                        <i class="zmdi zmdi-assignment-check"></i>
+                    </span>
+
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            {%if message%}
+                                 <div class="col-md-12">
+                        <p class="text-primary" style="font-size: 30px;text-align: center;">INFO : <span class="text-info">{{message}}</span></p>
+                    </div>
+							{%endif%}
+							{%if result == 1%}
+								 <div class="col-md-12">
+                        <p class="text-primary" style="font-size: 30px;text-align: center;">TETANUS RESULT : <span class="text-danger">Positive</span></p>
+                    </div>
+                                {%elif result == 0%}
+                                <div class="col-md-12">
+                        <p class="text-primary" style="font-size: 30px;text-align: center;">TETANUS RESULT : <span class="text-success">Negative</span></p>
+                    </div>
+							{%endif%}
+							{%if accuracy%}
+								<p>
+									<h4 style="color: #000;margin: auto;">Prediction Accuracy: {{accuracy}}%</h4>
+								</p>
+							{%endif%}
+
+
+{#                            <div class="col-md-12">#}
+{#                        <p class="text-primary" style="font-size: 30px;text-align: center;">RESULT : <span class="text-success">VALUE</span></p>#}
+{#                    </div>#}
+<br><br><br>
+ <hr style="border: solid #0b0b0b;width: 100%;">
+  <p class="text-success" style="font-size: 20px;text-align: center;margin: auto">-----ASSESSMENT FACTORS-----</p>
+
+                         <div class="row">
+
+                            <div class="col-md-9">
+                             <h4>Blood stools</h4>
+                             </div>
+
+                              <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s1 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {%else%}
+                                 <span class="text-success">No</span>
+                                 {%endif%}
+                             </h4>
+                             </div>
+
+                              <div class="col-md-9">
+                             <h4>Diarrhea</h4>
+                             </div>
+
+                              <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s2 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {%else%}
+                                 <span class="text-success">No</span>
+                                 {%endif%}
+                             </h4>
+                             </div>
+
+                              <div class="col-md-9">
+                             <h4>Fever or High Temperature</h4>
+                             </div>
+
+                              <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s3 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {% else %}
+                                 <span class="text-success">No</span>
+                                 {% endif %}
+                             </h4>
+                             </div>
+
+
+                             <div class="col-md-9">
+                             <h4>Headache</h4>
+                             </div>
+
+                              <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s4 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {% else %}
+                                 <span class="text-success">No</span>
+                                 {% endif %}
+                             </h4>
+                             </div>
+
+                             <div class="col-md-9">
+                             <h4>Sensitivity to Touch</h4>
+                             </div>
+
+                              <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s5 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {% else %}
+                                 <span class="text-success">No</span>
+                                 {% endif %}
+                             </h4>
+                             </div>
+
+                             <div class="col-md-9">
+                             <h4>Soar Throat</h4>
+                             </div>
+
+                              <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s6 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {% else %}
+                                 <span class="text-success">No</span>
+                                 {% endif %}
+                             </h4>
+                             </div>
+
+                             <div class="col-md-9">
+                             <h4>Sweating</h4>
+                             </div>
+
+                              <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s7 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {% else %}
+                                 <span class="text-success">No</span>
+                                 {% endif %}
+                             </h4>
+                             </div>
+
+                             <div class="col-md-9">
+                             <h4>Rapid Heart-Beat</h4>
+                             </div>
+
+                              <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s8 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {% else %}
+                                 <span class="text-success">No</span>
+                                 {% endif %}
+                             </h4>
+                             </div>
+
+                             <div class="col-md-9">
+                             <h4>Trouble Swallowing</h4>
+                             </div>
+
+                             <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s9 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {% else %}
+                                 <span class="text-success">No</span>
+                                 {% endif %}
+                             </h4>
+                             </div>
+
+
+                             <div class="col-md-9">
+                             <h4>Muscle Stiffness</h4>
+                             </div>
+
+                              <div class="col-md-3" style="padding-bottom: 10px;">
+                             <h4>
+                                 {%if s10 == '1'%}
+                                <span class="text-danger">Yes</span>
+                                 {% else %}
+                                 <span class="text-success">No</span>
+                                 {% endif %}
+                             </h4>
+                             </div>
+
+
+
+                        </div>
+
+            <hr style="border: solid #0b0b0b;width: 100%;">
+
+
+
+                    <div class="col-md-12">
+                          <div class="text-center">
+                        <span class="txt1">
+                          <a class="txt2" href="{{url_for('index')}}">
+                            Click to go Back to Home
+                        </a>
+                    </div>
+                    </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='login/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='login/vendor/animsition/js/animsition.min.js') }}"></script>
+<!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='login/vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='login/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='login/vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='login/vendor/daterangepicker/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='login/vendor/daterangepicker/daterangepicker.js') }}"></script>
+<!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='login/vendor/countdowntime/countdowntime.js') }}"></script>
+<!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='login/js/main.js') }}"></script>
+
+
+</body>
+</html>
